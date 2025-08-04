@@ -75,10 +75,9 @@ span {
 }
 
 .chat-messages {
-    max-height: 300px; /* altura máxima para não ocupar tudo */
+    max-height: 300px;
     overflow-y: auto;
-    padding-right: 5px;
-    margin-bottom: 10px;
+    padding: 10px; /* distância da borda em todos os lados */
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -86,12 +85,12 @@ span {
     font-size: 10px;
     font-family: 'Press Start 2P', cursive;
     word-break: break-word;
+    width: 100%;
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid #aaa;
     padding: 6px;
     border-radius: 10px;
-    width: fit-content;
-    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .chat-message {
