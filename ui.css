@@ -62,7 +62,6 @@ span {
     width: 250px;
     height: 400px;
     background-color: #b4b4b400;
-    
     display: flex;
     position: absolute;
     left: 0;
@@ -70,61 +69,52 @@ span {
     transition: background-color 0.2s ease-in-out;
 }
 
-.chat:hover {
-    width: 250px;
-    height: 400px;
+.chat:hover,
+.chat.focused {
     background-color: #b4b4b43d;
-    
-    display: flex;
-    position: absolute;
-    left: 0;
-    bottom: 0;
 }
 
 .chat > input {
-  width: 230px;
-  height: 20px;
-  padding: 5px 10px;
-  border: 2px solid #5f5f5f;
-  border-radius: 15px; 
-  outline: none; 
-  font-size: 14px;
-  background-color: #f0f0f01f;
-  color: white;
-  
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 5px;
-  transition: border-color 0.3s ease-in-out;
+    width: 230px;
+    height: 20px;
+    padding: 5px 10px;
+    border: 2px solid #5f5f5f;
+    border-radius: 15px;
+    outline: none;
+    font-size: 14px;
+    background-color: #f0f0f01f;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5px;
+    transition: border-color 0.3s ease-in-out;
 }
 
 .chat > input:focus {
-  border-color: #242424;
+    border-color: #242424;
 }
 
 .chat > button {
-  width: 34px; 
-  height: 34px; 
-  border: none;
-  border-radius: 15px;
-  color: #fff;
-  background-color: #007bff00;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer; 
-  
-  position: absolute;
-  right: 5px; /* Alinha com o padding do input */
-  bottom: 5px;
-  transition: background-color 0.3s ease-in-out;
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #007bff00;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    transition: background-color 0.3s ease-in-out;
 }
 
-
 .chat > button:hover {
-  background-color: #b4b4b467;
+    background-color: #b4b4b467;
 }
 
 .chat > button:active {
-  background-color: #b4b4b485;
+    background-color: #b4b4b485;
 }
