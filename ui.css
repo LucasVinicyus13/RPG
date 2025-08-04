@@ -70,20 +70,24 @@ span {
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Garante que o input fique embaixo */
 }
 
 .chat:hover {
     background-color: #b4b4b43d;
 }
 
-/* Container do input + botão */
+/* Parte que vai crescer com mensagens (pode deixar vazia por enquanto) */
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Input + botão colados no fundo */
 .chat-input-container {
     display: flex;
     align-items: center;
     gap: 5px;
-    width: 100%;
-    margin-top: auto; /* Mantém no fundo mesmo se a div crescer */
+    margin-top: auto; /* Gruda no final da div */
 }
 
 /* Input */
