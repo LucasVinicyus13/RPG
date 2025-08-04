@@ -115,7 +115,7 @@ span {
   cursor: pointer; 
   
   position: absolute;
-  right: 8px; /* Alinha com o padding do input */
+  right: 5px; /* Alinha com o padding do input */
   bottom: 5px;
   transition: background-color 0.3s ease-in-out;
 }
