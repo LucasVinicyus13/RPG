@@ -7,3 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
         inputElement.value = '';
     });
 });
+
+const chatDiv = document.querySelector('.chat');
+const input = chatDiv.querySelector('input');
+
+input.addEventListener('focus', () => {
+    chatDiv.classList.add('focused');
+});
+
+input.addEventListener('blur', () => {
+    chatDiv.classList.remove('focused');
+});
