@@ -8,38 +8,33 @@ document.addEventListener('DOMContentLoaded', () => {
         const messageText = inputElement.value.trim();
         if (messageText === '') return;
 
-        // Cria o container da mensagem
         const messageDiv = document.createElement('div');
         messageDiv.classList.add('chat-message');
 
-        // Cria o span do nome
         const nameSpan = document.createElement('span');
         nameSpan.classList.add('name');
-        nameSpan.textContent = 'lucas:';
+        nameSpan.textContent = 'lucas: ';
 
-        // Cria o span da mensagem
         const textSpan = document.createElement('span');
         textSpan.classList.add('text');
         textSpan.textContent = messageText;
 
-        // Junta no container da mensagem
         messageDiv.appendChild(nameSpan);
         messageDiv.appendChild(textSpan);
 
-        // Adiciona a mensagem no container
         chatMessages.appendChild(messageDiv);
 
-        // Limpa o input
-        inputElement.value = '';
-
-        // Scrolla para baixo automaticamente
+        // Scroll para a última mensagem
         chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        inputElement.value = '';
+        inputElement.focus();
     });
 
-    // Para manter fundo cinza enquanto digitando
     inputElement.addEventListener('focus', () => {
         chatDiv.classList.add('focused');
     });
+
     inputElement.addEventListener('blur', () => {
         chatDiv.classList.remove('focused');
     });
