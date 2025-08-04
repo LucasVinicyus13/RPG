@@ -80,11 +80,11 @@ span {
     gap: 5px;
 
     position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
 }
+
 
 /* Estilo do input */
 .chat-input-container input {
