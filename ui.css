@@ -1,63 +1,3 @@
-.info_bar {  /* user info */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-    width: 200px;
-    height: 80px;
-    background-color: white;
-    border-radius: 0 15px 15px 15px;
-    border: 2px solid black;
-    padding: 0.4rem;
-}
-
-.info_user {
-    display: flex;
-    justify-content: space-between;
-    font-size:1.2rem ;
-}
-
-.bar {
-    width: 100%;
-    height: 15px;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-bottom: 6px ;
-    text-align: center;
-} 
-
-.vida {
-    background-color: rgb(255, 38, 38);
-}
-
-.energia {
-    background-color: rgb(48, 189, 189);
-    margin-bottom: -1px;
-}
-
-.estamina {
-    height: 30px;
-    margin-top: 1px;
-    margin-bottom: 4px;
-    padding-bottom: 2px;
-    background-color: rgb(1, 177, 30);
-    border-radius: 5px;
-}
-
-span {
-    font-size: 15px;
-}
-/* Skill Bar */
-
-.skill_bar {
-    display: flex;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    border-radius: 15px 15px 0 15px;
-}
-
-/* Chat */
-
 .chat {
     width: 300px;
     height: 400px;
@@ -68,7 +8,8 @@ span {
     left: 0;
     bottom: 0;
     transition: background-color 0.2s ease-in-out;
-    padding: 10px 0;
+    border-radius: 0 15px 15px 15px;
+    padding-bottom: 40px; /* espaço para input e botão */
 }
 
 .chat:hover,
@@ -76,41 +17,42 @@ span {
     background-color: #b4b4b43d;
 }
 
-/* Container das mensagens: */
+/* área das mensagens, scrollável */
 .chat-messages {
-    flex: 1; /* ocupa o máximo possível em altura */
+    flex: 1;
     overflow-y: auto;
-    padding: 0 10px;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 12px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 4px;
     color: white;
 }
 
-/* Cada mensagem: */
+/* cada mensagem como linha única */
 .chat-message {
     width: 100%;
+    font-size: 14px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-bottom: 4px;
 }
 
-/* Nome do usuário na mensagem */
+/* nome azul */
 .chat-message .name {
-    color: #3399ff; /* azul */
+    color: #3a7bd5;
     font-weight: bold;
-    margin-right: 6px;
 }
 
-/* Texto da mensagem */
+/* texto da mensagem branco */
 .chat-message .text {
     color: white;
 }
 
-/* Input e botão continuam como antes: */
+/* input do chat */
 .chat > input {
-    width: 280px;
-    height: 20px;
+    width: 260px;
+    height: 30px;
     padding: 5px 10px;
     border: 2px solid #5f5f5f;
     border-radius: 15px;
@@ -119,8 +61,7 @@ span {
     background-color: #f0f0f01f;
     color: white;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 10px;
     bottom: 5px;
     transition: border-color 0.3s ease-in-out;
 }
@@ -129,6 +70,7 @@ span {
     border-color: #242424;
 }
 
+/* botão enviar */
 .chat > button {
     width: 34px;
     height: 34px;
@@ -140,7 +82,7 @@ span {
     font-weight: bold;
     cursor: pointer;
     position: absolute;
-    right: 5px;
+    right: 10px;
     bottom: 5px;
     transition: background-color 0.3s ease-in-out;
 }
