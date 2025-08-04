@@ -1,4 +1,5 @@
-.info_bar {  /* user info */
+/* Barra de informações do usuário */
+.info_bar {
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
@@ -13,7 +14,7 @@
 .info_user {
     display: flex;
     justify-content: space-between;
-    font-size:1.2rem ;
+    font-size: 1.2rem;
 }
 
 .bar {
@@ -21,9 +22,9 @@
     height: 15px;
     border: 1px solid black;
     border-radius: 5px;
-    margin-bottom: 6px ;
+    margin-bottom: 6px;
     text-align: center;
-} 
+}
 
 .vida {
     background-color: rgb(255, 38, 38);
@@ -46,8 +47,8 @@
 span {
     font-size: 15px;
 }
-/* Skill Bar */
 
+/* Skill Bar */
 .skill_bar {
     display: flex;
     position: absolute;
@@ -57,12 +58,10 @@ span {
 }
 
 /* Chat */
-
 .chat {
     width: 250px;
     height: 400px;
     background-color: #b4b4b400;
-    
     display: flex;
     position: absolute;
     left: 0;
@@ -71,59 +70,58 @@ span {
 }
 
 .chat:hover {
-    width: 250px;
-    height: 400px;
     background-color: #b4b4b43d;
-    
+}
+
+/* Container do input + botão */
+.chat-input-container {
     display: flex;
+    align-items: center;
+    gap: 5px;
+
     position: absolute;
-    left: 0;
-    bottom: 0;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
 }
 
-.chat > input {
-  width: 230px;
-  height: 20px;
-  padding: 5px 10px;
-  border: 2px solid #5f5f5f;
-  border-radius: 15px; 
-  outline: none; 
-  font-size: 14px;
-  background-color: #f0f0f01f;
-  color: white;
-  
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 5px;
-  transition: border-color 0.3s ease-in-out;
+/* Estilo do input */
+.chat-input-container input {
+    flex: 1;
+    height: 32px;
+    padding: 5px 10px;
+    border: 2px solid #5f5f5f;
+    border-radius: 15px;
+    background-color: #f0f0f01f;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
 }
 
-.chat > input:focus {
-  border-color: #242424;
+.chat-input-container input:focus {
+    border-color: #242424;
 }
 
-.chat > button {
-  width: 25px; 
-  height: 32px; 
-  border: none;
-  border-radius: 15px;
-  color: #fff;
-  background-color: #007bff00;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer; 
-  
-  position: absolute;
-  left: 231.5px;
-  bottom: 5px;
-  transition: background-color 0.3s ease-in-out;
+/* Estilo do botão */
+.chat-input-container button {
+    height: 32px;
+    padding: 0 12px;
+    border: none;
+    border-radius: 15px;
+    background-color: #007bff00;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.chat > button:hover {
-  background-color: #b4b4b467;
+.chat-input-container button:hover {
+    background-color: #b4b4b467;
 }
 
-.chat > button:active {
-  background-color: #b4b4b485;
+.chat-input-container button:active {
+    background-color: #b4b4b485;
 }
