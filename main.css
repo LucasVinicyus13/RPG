@@ -6,6 +6,23 @@ body {
     font-family: "Press Start 2P", Arial, sans-serif;
 }
 
+input::-webkit-input-placeholder {
+  font-family: 'Press Start 2P', cursive;
+}
+input::-moz-placeholder {
+  font-family: 'Press Start 2P', cursive;
+}
+input:-ms-input-placeholder {
+  font-family: 'Press Start 2P', cursive;
+}
+input::-ms-input-placeholder {
+  font-family: 'Press Start 2P', cursive;
+}
+input::placeholder {
+  font-family: 'Press Start 2P', cursive;
+}
+
+
 .game, .ui {
     position: fixed;
     width: 100%;
