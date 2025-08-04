@@ -115,10 +115,11 @@ span {
   cursor: pointer; 
   
   position: absolute;
-  left: 231.5px;
+  right: 10px; /* Alinha com o padding do input */
   bottom: 5px;
   transition: background-color 0.3s ease-in-out;
 }
+
 
 .chat > button:hover {
   background-color: #b4b4b467;
