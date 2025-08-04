@@ -118,3 +118,7 @@ span {
 .chat > button:active {
     background-color: #b4b4b485;
 }
+
+.chat.focused {
+  background-color: #b4b4b43d !important;
+}
