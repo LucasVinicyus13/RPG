@@ -82,21 +82,18 @@ span {
 }
 
 .chat > input {
-  width: 200px;
-  height: 20px;
+  width: 100%;           /* flexível para ocupar espaço */
+  height: 32px;
   padding: 5px 10px;
   border: 2px solid #5f5f5f;
-  border-radius: 15px; 
-  outline: none; 
+  border-radius: 15px;
+  outline: none;
   font-size: 14px;
   background-color: #f0f0f01f;
   color: white;
-  
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 5px;
   transition: border-color 0.3s ease-in-out;
+  
+  /* REMOVIDO: position, left, bottom, transform */
 }
 
 .chat > input:focus {
@@ -104,22 +101,19 @@ span {
 }
 
 .chat > button {
-  width: 32px; 
-  height: 32px; 
+  height: 32px;
+  padding: 0 12px;
   border: none;
-  border-radius: 50px;
-  color: #fff;
+  border-radius: 15px;
   background-color: #007bff00;
+  color: white;
   font-size: 14px;
   font-weight: bold;
-  cursor: pointer; 
-  
-  position: absolute;
-  right: 8px; /* Alinha com o padding do input */
-  bottom: 5px;
+  cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-}
 
+  /* REMOVIDO: position, right, bottom */
+}
 
 .chat > button:hover {
   background-color: #b4b4b467;
