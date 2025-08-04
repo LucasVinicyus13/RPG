@@ -59,7 +59,7 @@ span {
 /* Chat */
 
 .chat {
-    width: 250px;
+    width: 300px;
     height: 400px;
     background-color: #b4b4b400;
     display: flex;
@@ -75,7 +75,7 @@ span {
 }
 
 .chat > input {
-    width: 230px;
+    width: 280px;
     height: 20px;
     padding: 5px 10px;
     border: 2px solid #5f5f5f;
