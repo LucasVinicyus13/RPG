@@ -1,41 +1,51 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const inputElement = document.getElementById('messageInput');
-    const buttonElement = document.getElementById('sendButton');
-    const chatMessages = document.querySelector('.chat-messages');
-    const chatDiv = document.querySelector('.chat');
+    const inputEl = document.getElementById('messageInput');
+    const btnEl   = document.getElementById('sendButton');
+    const msgsEl  = document.querySelector('.chat-messages');
+    const chatEl  = document.querySelector('.chat');
 
-    buttonElement.addEventListener('click', () => {
-        const messageText = inputElement.value.trim();
-        if (messageText === '') return;
+    function addMessage(text) {
+        if (!text.trim()) return;
 
-        const messageDiv = document.createElement('div');
-        messageDiv.classList.add('chat-message');
+        const msg = document.createElement('div');
+        msg.className = 'chat-message';
 
         const nameSpan = document.createElement('span');
-        nameSpan.classList.add('name');
+        nameSpan.className = 'name';
         nameSpan.textContent = 'lucas: ';
 
         const textSpan = document.createElement('span');
-        textSpan.classList.add('text');
-        textSpan.textContent = messageText;
+        textSpan.className = 'text';
+        textSpan.textContent = text;
 
-        messageDiv.appendChild(nameSpan);
-        messageDiv.appendChild(textSpan);
+        msg.append(nameSpan, textSpan);
+        // adiciona no topo da pilha reversa
+        msgsEl.prepend(msg);
 
-        chatMessages.appendChild(messageDiv);
+        // scroll automático: mantém o scroll embaixo
+        msgsEl.scrollTop = msgsEl.scrollHeight;
 
-        // Scroll para a última mensagem
-        chatMessages.scrollTop = chatMessages.scrollHeight;
+        // faz sumir após 8 segundos
+        setTimeout(() => {
+            msg.style.opacity = '0';
+            setTimeout(() => msg.remove(), 500);
+        }, 8000);
+    }
 
-        inputElement.value = '';
-        inputElement.focus();
+    btnEl.addEventListener('click', () => {
+        addMessage(inputEl.value);
+        inputEl.value = '';
+        inputEl.focus();
     });
 
-    inputElement.addEventListener('focus', () => {
-        chatDiv.classList.add('focused');
+    inputEl.addEventListener('keypress', e => {
+        if (e.key === 'Enter') {
+            addMessage(inputEl.value);
+            inputEl.value = '';
+        }
     });
 
-    inputElement.addEventListener('blur', () => {
-        chatDiv.classList.remove('focused');
-    });
+    // mantém fundo cinza enquanto digita (caso use foco)
+    inputEl.addEventListener('focus', () => chatEl.classList.add('focused'));
+    inputEl.addEventListener('blur',  () => chatEl.classList.remove('focused'));
 });
