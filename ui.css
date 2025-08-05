@@ -3,11 +3,12 @@
     bottom: 0;
     left: 0;
     width: 320px;
-    height: 400px;
+    height: 200px;
     background-color: #2f2f2f;
     border-radius: 0 15px 15px 15px;
-    overflow: hidden;
     font-family: "Press Start 2P", monospace;
+    display: flex;
+    flex-direction: column;
 }
 
 .chat:hover,
@@ -16,14 +17,23 @@
 }
 
 .chat-messages {
-    height: 150px;
-    overflow: hidden;
+    flex-grow: 1;
+    overflow-y: auto;
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-start;
     padding: 10px;
     box-sizing: border-box;
     gap: 6px;
+}
+
+.chat-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 4px;
 }
 
 .chat-message {
@@ -38,11 +48,15 @@
     color: #4fa3ff;
 }
 
-.chat input {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    width: 230px;
+.chat-input-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.chat-input-wrapper input {
+    flex-grow: 1;
     height: 30px;
     padding: 5px 10px;
     border: none;
@@ -54,10 +68,11 @@
     outline: none;
 }
 
-.chat button {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+.chat-input-wrapper input:focus {
+    box-shadow: 0 0 0 2px #4fa3ff;
+}
+
+.chat-input-wrapper button {
     width: 34px;
     height: 30px;
     border: none;
@@ -69,22 +84,10 @@
     cursor: pointer;
 }
 
-.chat-message .text {
-    color: white;
-}
-
-
-
-.chat > input:focus {
-    border-color: #242424;
-}
-
-
-
-.chat > button:hover {
+.chat-input-wrapper button:hover {
     background-color: #b4b4b467;
 }
 
-.chat > button:active {
+.chat-input-wrapper button:active {
     background-color: #b4b4b485;
 }
