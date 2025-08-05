@@ -4,7 +4,6 @@
     background-color: #2f2f2f;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -23,18 +22,17 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    padding: 0;
-    margin-bottom: 10px;
+    gap: 2px; /* espaçamento mínimo, estilo WhatsApp */
+    padding-right: 4px; /* para o scroll não cortar texto */
 }
 
 .chat-message {
     width: 100%;
-    box-sizing: border-box;
-    padding: 0 10px;
-    font-size: 12px;
+    font-size: 10px;
     font-family: "Press Start 2P", monospace;
     word-break: break-word;
+    line-height: 1.4;
+    color: white;
 }
 
 .chat-message .name {
