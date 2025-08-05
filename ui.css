@@ -9,6 +9,7 @@
     font-family: "Press Start 2P", monospace;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end; /* Alterado para empurrar o conteúdo para baixo */
 }
 
 .chat:hover,
@@ -24,7 +25,7 @@
     justify-content: flex-start;
     padding: 10px;
     box-sizing: border-box;
-    gap: 4px;
+    gap: 2px; /* Espaçamento mínimo entre as mensagens */
 }
 
 .chat-messages::-webkit-scrollbar {
@@ -52,7 +53,6 @@
     display: flex;
     align-items: center;
     padding: 10px;
-    padding-bottom: 20px; /* Alterado de 10px para 20px */
     gap: 10px;
 }
 
