@@ -1,3 +1,96 @@
+.card_ui {
+  background-color: white;
+  border: 2px solid rgba(75, 75, 75, 0.274);
+  padding: 0.3rem;
+}
+
+.info_bar {  /* user info */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  width: 200px;
+  height: 80px;
+  border-radius: 0 15px 15px 0;
+}
+
+.info_user {
+  display: flex;
+  justify-content: space-between;
+  font-size:1.2rem ;
+}
+
+.bar {
+  width: 100%;
+  height: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 6px ;
+  text-align: center;
+} 
+
+.vida {
+  background-color: rgb(255, 38, 38);
+}
+
+.energia {
+  background-color: rgb(48, 189, 189);
+  margin-bottom: -1px;
+}
+
+.estamina {
+  height: 30px;
+  margin-top: 1px;
+  margin-bottom: 4px;
+  padding-bottom: 2px;
+  background-color: rgb(1, 177, 30);
+  border-radius: 5px;
+}
+
+span {
+  font-size: 15px;
+}
+
+/* Fundo UI */
+
+.fundo_ui {
+  background-color: white;
+  width: 325px;
+  height: 100%;
+}
+
+/* Config Bar */
+
+.config_bar {
+  padding: revert-layer;
+  padding: 5px 10px 8px 5px;
+  display: flex;
+  width: 78px;
+  height: 78px;
+  position: fixed;
+  left: 220px;
+  top: 0px;
+  border-radius: 0 0 10px 10px;
+}
+
+.qt {
+  display: flex;
+  height: 36px;
+  width: 36px;
+  margin: 2px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.qt:hover {
+  outline: 1px solid black;
+}
+
+.iconfig {
+  height: 100%;
+  width: 100%;
+  /*filter: brightness(0%);*/
+}
+
 .chat {
     position: absolute;
     bottom: 0;
@@ -52,8 +145,6 @@
 .chat-input-wrapper {
     display: flex;
     align-items: center;
-    padding: 10px;
-    gap: 10px;
 }
 
 .chat-input-wrapper input {
@@ -75,7 +166,7 @@
 
 .chat-input-wrapper button {
     width: 34px;
-    height: 30px;
+    height: 34px;
     border: none;
     border-radius: 10px;
     background-color: #1e1e1e;
