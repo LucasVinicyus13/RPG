@@ -155,7 +155,7 @@ span {
     flex-grow: 1;
     height: 30px;
     padding: 5px 10px;
-    border: none;
+    border: #000;
     border-radius: 10px;
     background-color: #1e1e1e00;
     color: white;
